@@ -17,3 +17,5 @@ def parse(text):
 
     return data
 
+print(parse("The cat jumped over the fence."))
+
