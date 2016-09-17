@@ -42,30 +42,54 @@
 
   <div class="container">
 
-       <div class="starter-template">
-         <h1>parsed completed</h1>
-         <p class="lead">
-           {% for word in words%}
-             <span class="{{ word["pos"] }}">{{ word["orth"] }} </span>
-           {% endfor %}
-         </p>
+    <div class="starter-template">
+      <h1>parsed completed</h1>
+      <p class="lead">
+      {% for word in words%}
+        <span class="{{ word["pos"] }} pword" name="{{ word["lemma"] }}">{{ word["orth"] }} </span>
+      {% endfor %}
+      </p>
 
-         <p class="lead">
-            {{ definition }}
-         </p>
-
-
+      <p class="lead">
+      {{ definition }}
+      </p>
 
 
-       </div>
 
-     </div>
+
+    </div>
+
+    <div class="defbox">
+    </div>
+
+
+  </div>
   <!-- Bootstrap core JavaScript
   ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
   <script src="../static/js/bootstrap.min.js"></script>
+
+  <script>
+  $( "span.pword" )
+    .click(function() {
+      console.log($(this).attr('name'))
+      var pathstring = "http://api.pearson.com/v2/dictionaries/lasde/entries?headword="
+      var lemma = $(this).attr('name')
+
+      $.get(pathstring.concat(lemma),
+        function( data ) {
+          console.log(data);
+        }
+      );
+
+      /* $( "div.defbox" ).replaceWith( self.text() ); */
+    })
+   
+  </script>
+
+
 </body>
 
 </html>

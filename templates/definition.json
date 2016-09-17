@@ -1,0 +1,101 @@
+{
+  "status": 200,
+  "offset": 0,
+  "limit": 10,
+  "count": 4,
+  "total": 4,
+  "url": "/v2/dictionaries/lasde/entries?headword=fence",
+  "results": [
+    {
+      "datasets": [
+        "lasde",
+        "dictionary"
+      ],
+      "headword": "fence",
+      "homnum": 2,
+      "id": "cqAFnYkbJA",
+      "part_of_speech": "verb",
+      "senses": [
+        {
+          "definition": [
+            "to fight with a sword as a sport"
+          ],
+          "gramatical_info": {
+            "type": "intransitive"
+          }
+        }
+      ],
+      "url": "/v2/dictionaries/entries/cqAFnYkbJA"
+    },
+    {
+      "datasets": [
+        "lasde",
+        "dictionary"
+      ],
+      "headword": "fence",
+      "homnum": 1,
+      "id": "cqAFnYh3d4",
+      "part_of_speech": "noun",
+      "pronunciations": [
+        {
+          "ipa": "fens"
+        }
+      ],
+      "senses": [
+        {
+          "definition": [
+            "a line of upright wooden posts with wire or wood between that surrounds an area of land"
+          ],
+          "examples": [
+            {
+              "text": "the garden fence"
+            }
+          ]
+        }
+      ],
+      "url": "/v2/dictionaries/entries/cqAFnYh3d4"
+    },
+    {
+      "datasets": [
+        "lasde",
+        "dictionary"
+      ],
+      "headword": "fencing",
+      "id": "cqAFnYpTbP",
+      "part_of_speech": "noun",
+      "pronunciations": [
+        {
+          "ipa": "ˈfensɪŋ"
+        }
+      ],
+      "senses": [
+        {
+          "definition": [
+            "the sport of fighting with a long thin sword"
+          ]
+        }
+      ],
+      "url": "/v2/dictionaries/entries/cqAFnYpTbP"
+    },
+    {
+      "datasets": [
+        "lasde",
+        "dictionary"
+      ],
+      "headword": "picket fence",
+      "id": "cqAFxPJzcz",
+      "part_of_speech": "noun",
+      "senses": [
+        {
+          "definition": [
+            "a fence made of a line of pointed sticks fixed into the ground"
+          ]
+        }
+      ],
+      "url": "/v2/dictionaries/entries/cqAFxPJzcz"
+    }
+  ]
+}
+Response Code
+200
+Response Headers

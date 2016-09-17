@@ -2,6 +2,7 @@
 import spacy
 
 en = spacy.load("en")
+print("finished loading parser2")
 
 def parse(text):
     doc = en(text)
@@ -17,6 +18,4 @@ def parse(text):
         data["words"].append(word)
 
     return data
-
-print("finished loading parser2")
 
