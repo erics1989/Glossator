@@ -3,8 +3,8 @@ from flask import Flask, jsonify, render_template
 app = Flask(__name__)
 
 @app.route('/')
-def hello_world():
-    return 'Hello, World!'
+def glossator():
+    return render_template('base.html', text='GLOSSY')
 
 
 if __name__ == 'main':
