@@ -44,7 +44,16 @@
 
        <div class="starter-template">
          <h1>parsed completed</h1>
-         <p class="lead">{{ parsed }}</p>
+         <p class="lead">
+           {% for word in words%}
+             <span class="{{ word["pos"] }}">{{ word["orth"] }} </span>
+           {% endfor %}
+         </p>
+
+         <p class="lead">
+            {{ definition }}
+         </p>
+
 
 
 

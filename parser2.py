@@ -18,5 +18,5 @@ def parse(text):
 
     return data
 
-print(parse("The cat jumped over the fence."))
+print("finished loading parser2")
 
