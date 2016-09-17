@@ -7,6 +7,7 @@
 
     <link href="../static/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="../static/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Eczar" rel="stylesheet"> 
     <link href="../static/css/glossator.css" rel="stylesheet">
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="../static/js/bootstrap.min.js"></script>
@@ -42,30 +43,30 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-sm-4">
-        One of three columns
+      <div class="col-sm-8 l-pane">
+        <h1>Glossator</h1>
+        <p class="lead">
+          Glossator annotates plaintext.
+        </p>
+
+        <form action="." method="POST">
+          <textarea class="user-input" name="text">Input text here</textarea><br>
+          <input type="submit" class="btn btn-primary btn-lg" value="Gloss"></input>
+          <!--<input type="submit" name="my-form" value="Send">-->
+        </form>
       </div>
-      <div class="col-sm-4">
+      <div class="col-sm-4 r-pane">
         One of three columns
       </div>
     </div>
 
     <!--
        <div class="starter-template">
-         <h1>Bootstrap starter template</h1>
-         <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
-
-         <h1>Enter some text</h1>
-         <h2>(it will be converted to uppercase)</h2>
-         <form action="." method="POST">
-           <input type="text" name="text">
-           <input type="submit" name="my-form" value="Send">
-         </form>
        </div>
 
     -->
 
-     </div>
+  </div>
   <!-- Bootstrap core JavaScript
   ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
