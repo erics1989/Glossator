@@ -18,6 +18,7 @@ def glossator_parse():
     text = request.form['text']
     data = parser2.parse(text)
     return render_template('parsed.html', words=data["words"])
- 
+
+
 if __name__ == 'main':
     app.run(debug=True)

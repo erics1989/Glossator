@@ -7,6 +7,7 @@
 
     <link href="../static/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="../static/css/bootstrap-theme.min.css" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css?family=Eczar" rel="stylesheet"> 
     <link href="../static/css/glossator.css" rel="stylesheet">
@@ -35,8 +36,14 @@
       <div id="navbar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
           <li><a href="about">About</a></li>
+          
+          
         </ul>
+
+
       </div><!--/.nav-collapse -->
+
+
     </div>
   </nav>
   
@@ -72,6 +79,12 @@
   <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
   <script src="../static/js/bootstrap.min.js"></script>
   <script src="../static/js/def_format.js"></script>
+
+  <script>
+    $(document).ready(function () {
+        $('.dropdown-toggle').dropdown();
+    });
+  </script>
 
 </body>
 
