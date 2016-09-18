@@ -46,10 +46,12 @@ function translate(word, jhash) {
   return return_s
 }
 
-/*
-$( "span.pword" ).click(function() {
-
-    word = $(this).attr('name')
+$( "span.pword" ).mouseover(function() {
+  console.log("hello")
+  var dictionary = $("select.language-select").val()
+  console.log(dictionary) 
+  if (dictionary === "english") {
+    var word = $(this).attr('name')
     // For now, we only care about NOUN, VERB
     //ADP, ADV, AUX, CONJ, DET, INTJ, NOUN, NUM, PART,
     //PRON, PROPN, PUNCT, SCONJ, SYM, VERB, X, EOL, SPACE
@@ -92,14 +94,8 @@ $( "span.pword" ).click(function() {
     });
 
 
-  }
-)
-
-*/
-
-$( "span.pword" ).click(function() {
-
-    word = $(this).attr('name')
+  } else if (dictionary === "chinese") {
+    var word = $(this).attr('name')
     // For now, we only care about NOUN, VERB
     //ADP, ADV, AUX, CONJ, DET, INTJ, NOUN, NUM, PART,
     //PRON, PROPN, PUNCT, SCONJ, SYM, VERB, X, EOL, SPACE
@@ -140,29 +136,8 @@ $( "span.pword" ).click(function() {
         }
 
     });
-
-    /* $( "div.defbox" ).replaceWith( self.text() ); */
   }
-)
+})
 
 
-
-/*
-$( "span.pword" )
-  .click(function() {
-    console.log($(this).attr('name'))
-    var word = $(this).attr('name')
-    var pathstring = "http://api.pearson.com/v2/dictionaries/lasde/entries?headword="
-    pathstring = pathstring.concat(word)
-    
-
-    $.get(
-      pathstring,
-      function( data ) {
-        var defin = convert(word, data);
-        $("div.defbox").html(defin);
-      }
-    );
-  })
-*/
 
