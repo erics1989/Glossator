@@ -20,6 +20,12 @@ body {
   font-size: 40px;
 }
 
+.about {
+  font-family: 'Eczar', serif;
+  font-size: 25px;
+}
+
+
 .word:hover {
   text-decoration: underline;
 }

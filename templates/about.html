@@ -31,7 +31,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="">Glossator</a>
+        <a class="navbar-brand" href="/">Glossator</a>
       </div>
       <div id="navbar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
@@ -56,14 +56,34 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-8 l-pane">
-        <p class="paragraph">
-          {% for word in words %}<span class="{{ word.pos_ }} pword word" name="{{ word.lemma_ }}" pos="{{ word.pos_ }}">{{ word.orth_ }}</span>{{ word.whitespace_ }}{% endfor %}
-        </p>
+        <div class="about">
+            <p>Glossator is an awesome platform that detects the definition of every word in a given text in a desired language. Since a word can have multiple definitions, depending on the part of speech of the word, Glossator can identify the most accurate definition for that word from a dictionary. Morever, the words are highlighted with a color that matches its part of speech which gives users an exciting environment to work with. Glossator is not only accurate, fast, and comprehensive, but helps users learn how to become effective and organized readers.</p>
+                    
+          <p>APIs Used</p>
+          <ul>
+            <li><a href="http://developer.pearson.com/apis/dictionaries">Pearson Dictionaries API</li>
+            <li><a href="https://spacy.io/">SpaCy</a></li>
+            <li><a href="http://flask.pocoo.org/">Flask</a></li>
+            <li><a href="http://getbootstrap.com/">Bootstrap</a></li>
+          </ul>
+
+          <p>
+            <a href="https://github.com/erics1989/Glossator">Github page</a>
+          </p>
+
+
+        </div>
+
+
+
+
       </div>
 
       <div class="col-sm-4 r-pane">
         <div class="defbox">
-          Mouse over words for definitions.
+
+
+
         </div>
 
         

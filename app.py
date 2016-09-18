@@ -19,6 +19,9 @@ def glossator_parse():
     data = parser2.parse(text)
     return render_template('parsed.html', words=data["words"])
 
+@app.route('/about')
+def glossator_about():
+    return render_template('about.html')
 
 if __name__ == 'main':
     app.run(debug=True)
