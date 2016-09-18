@@ -77,6 +77,16 @@ $( "span.pword" ).mouseover(function() {
 
     $.get(pathstring, function(data) {
         if (data["results"].length != 0) {
+
+$( "span.word").each(function() {
+    $(this).css("background-color", "transparent");
+});
+$( "span[name=" + word + "]" ).each(function() {
+    $(this).css("background-color", "#eee8d5");
+});
+
+
+
             var defin = convert(word, data);
             $("div.defbox").html(defin);
         } else {
@@ -84,10 +94,20 @@ $( "span.pword" ).mouseover(function() {
             // and modify the defbox if the more broader query works...
             retry_pathstring = base.concat(word)
             $.get(retry_pathstring, function(retry_data) {
-                if (retry_data["results"].length != 0) {
+                //if (retry_data["results"].length != 0) {
+
+
+$( "span.word").each(function() {
+    $(this).css("background-color", "transparent");
+});
+$( "span[name=" + word + "]" ).each(function() {
+    $(this).css("background-color", "#eee8d5");
+});
+
+
                     var retry_defin = convert(word, retry_data);
                     $("div.defbox").html(retry_defin);
-                }
+                //}
             })
         }
 
@@ -121,6 +141,16 @@ $( "span.pword" ).mouseover(function() {
 
     $.get(pathstring, function(data) {
         if (data["results"].length != 0) {
+
+
+$( "span.word").each(function() {
+    $(this).css("background-color", "transparent");
+});
+$( "span[name=" + word + "]" ).each(function() {
+    $(this).css("background-color", "#eee8d5");
+});
+
+
             var defin = translate(word, data);
             $("div.defbox").html(defin);
         } else {
@@ -128,10 +158,20 @@ $( "span.pword" ).mouseover(function() {
             // and modify the defbox if the more broader query works...
             retry_pathstring = base.concat(word)
             $.get(retry_pathstring, function(retry_data) {
-                if (retry_data["results"].length != 0) {
+                //if (retry_data["results"].length != 0) {
+
+
+$( "span.word").each(function() {
+    $(this).css("background-color", "transparent");
+});
+$( "span[name=" + word + "]" ).each(function() {
+    $(this).css("background-color", "#eee8d5");
+});
+
+
                     var retry_defin = translate(word, retry_data);
                     $("div.defbox").html(retry_defin);
-                }
+                //}
             })
         }
 
@@ -139,5 +179,33 @@ $( "span.pword" ).mouseover(function() {
   }
 })
 
+
+$(function() {
+
+  // We can attach the `fileselect` event to all file inputs on the page
+  $(document).on('change', ':file', function() {
+    var input = $(this),
+        numFiles = input.get(0).files ? input.get(0).files.length : 1,
+        label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+    input.trigger('fileselect', [numFiles, label]);
+  });
+
+  // We can watch for our custom `fileselect` event like this
+  $(document).ready( function() {
+      $(':file').on('fileselect', function(event, numFiles, label) {
+
+          var input = $(this).parents('.input-group').find(':text'),
+              log = numFiles > 1 ? numFiles + ' files selected' : label;
+
+          if( input.length ) {
+              input.val(log);
+          } else {
+              if( log ) alert(log);
+          }
+
+      });
+  });
+  
+});
 
 

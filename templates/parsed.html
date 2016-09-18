@@ -57,7 +57,7 @@
     <div class="row">
       <div class="col-sm-8 l-pane">
         <p class="paragraph">
-          {% for word in words %}<span class="{{ word.pos_ }} pword word" name="{{ word.lemma_ }}" pos="{{ word.pos_ }}">{{ word.orth_ }}</span>{{ word.whitespace_ }}{% endfor %}
+          {% for word in words %}{% if (word.pos_ == "SPACE") %}<br><br>{% else %}<span class="{{ word.pos_ }} pword word" name="{{ word.lemma_ }}" pos="{{ word.pos_ }}">{{ word.orth_ }}</span>{{ word.whitespace_ }}{% endif %}{% endfor %}
         </p>
       </div>
 

@@ -40,6 +40,9 @@ body {
   background-color: #eee8d5;
   padding-top: 2rem;
   padding-bottom: 2rem;
+  position: fixed;
+  top: 50px;
+  right: 0px;
 }
 
 .headword {
