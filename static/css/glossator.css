@@ -10,36 +10,74 @@ body {
   height: 20em;  
 }
 
-.parsed_text {
+.logo {
+  font-family: 'Eczar', serif;
+  font-size: 80px;
+}
+
+.paragraph {
   font-family: 'Eczar', serif;
   font-size: 40px;
 }
 
+.word:hover {
+  text-decoration: underline;
+}
+
 .l-pane {
   height: 100%;
-  padding-top: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .r-pane {
   background-color: #eee8d5;
-  padding-top: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.headword {
+  color: #586e75;
+}
+
+.part_of_speech {
+  color: #93a1a1;
+}
+
+.defbox ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.PROPN {
+  color: #d33682;
 }
 
 .NOUN {
-  color: #b58900;
+  color: #dc322f;
 }
+
+.PRON {
+  color: #cb4b16;
+}
+
 
 .VERB {
   color: #268bd2;
 }
 
 .ADJ {
-  color: #859900;
+  color: #b58900;
 }
 
 .ADV {
   color: #6c71c4
 }
+
+.NUM {
+  color: #2aa198;
+}
+
 
 
 ADJ, ADP, ADV, AUX, CONJ, DET, INTJ, NOUN, NUM, PART, PRON, PROPN, PUNCT, SCONJ, SYM, VERB, X, EOL, SPACE

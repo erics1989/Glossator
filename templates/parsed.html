@@ -30,31 +30,27 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Project name</a>
+        <a class="navbar-brand" href="">Glossator</a>
       </div>
       <div id="navbar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="about">About</a></li>
         </ul>
       </div><!--/.nav-collapse -->
     </div>
   </nav>
-
+  
   <div class="container">
     <div class="row">
       <div class="col-sm-8 l-pane">
-        <div class="parsed_text">
-          {% for word in words %}
-            <span class="{{ word["pos"] }} pword" name="{{ word["lemma"] }}" pos="{{ word["pos"] }}">{{ word["orth"] }} </span>
-          {% endfor %}
-        </div>
-
-
+        <p class="paragraph">
+          {% for word in words %}<span class="{{ word.pos_ }} pword word" name="{{ word.lemma_ }}" pos="{{ word.pos_ }}">{{ word.orth_ }}</span>{{ word.whitespace_ }}{% endfor %}
+        </p>
       </div>
+
       <div class="col-sm-4 r-pane">
         <div class="defbox">
+          Mouse over words for definitions.
         </div>
 
         

@@ -4,11 +4,14 @@ import requests
 import parser2
 import json
 
+HOME_TEXT = "Glossator provides syntax highlighting and quick access to dictionary definitions for English text."
+
 app = Flask(__name__)
 
 @app.route('/')
 def glossator():
-    return render_template('base.html', text='GLOSSY')
+    data = parser2.parse(HOME_TEXT)
+    return render_template('base.html', words=data["words"])
 
 @app.route('/', methods=['POST'])
 def glossator_parse():
