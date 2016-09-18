@@ -47,16 +47,28 @@
           {% for word in words %}<span class="{{ word.pos_ }} pword word" name="{{ word.lemma_ }}" pos="{{ word.pos_ }}">{{ word.orth_ }}</span>{{ word.whitespace_ }}{% endfor %}
         </p>
 
-        <form action="." method="POST">
+        <form action="." method="POST" >
           <textarea class="user-input" name="text">paste text here</textarea><br>
-          <input type="submit" class="btn btn-primary btn-lg" value="Gloss"></input>
-          <!--<input type="submit" name="my-form" value="Send">-->
+          <input type="submit" class="btn btn-primary btn-lg" value="Gloss" style="float:left"></input>
         </form>
+
+        <div class="input-group input-group-lg" style="padding-left:8px" >
+
+            <label class="input-group-btn">
+                <span class="btn btn-primary btn-lg">
+                    Upload File
+                    <input type="file" id="filename" style="display: none;" multiple="">
+                </span>
+            </label>
+            <input type="text"  class="form-control" readonly="">
+
+        </div>
 
 <!--
         <form action="." method="POST">
-          <input type="file" id="filename"> </input>
+          <input type="file" id="filename" class="btn btn-primary btn-lg" value="Upload File"></input>
         </form>
+-->
 
 <script>
 function readSingleFile(e) {
@@ -68,16 +80,19 @@ function readSingleFile(e) {
   var contents = ""
   reader.onload = function(e) {
     contents += e.target.result;
-    console.log(contents);
+    console.log(contents)
+    $("textarea.user-input").val(contents);
+    console.log("success");
+
   };
   reader.readAsText(file);
+
+  
   return contents
 }
 
 document.getElementById('filename').addEventListener('change', readSingleFile, false);
 </script>
-
--->
 
 
       </div>

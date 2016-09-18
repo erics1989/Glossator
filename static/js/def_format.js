@@ -71,27 +71,24 @@ $( "span.pword" ).click(function() {
     }
 
     $.get(pathstring, function(data) {
-        var defin = convert(word, data);
-
-        // if defin actuall contains definitions, then we proceed
-        // with modifying defbox
-        if (defin.length > 20) {
+        if (data["results"].length != 0) {
+            var defin = convert(word, data);
             $("div.defbox").html(defin);
         } else {
             // else we do this ugly method where we do another get method
-            // and modify the defbox no matter what
-            $.get(pathstring, function(retry_data) {
-                var retry_defin = convert(word, retry_data);
-                if (retry_defin.length > 20) {
+            // and modify the defbox if the more broader query works...
+            retry_pathstring = base.concat(word)
+            $.get(retry_pathstring, function(retry_data) {
+                if (retry_data["results"].length != 0) {
+                    var retry_defin = convert(word, retry_data);
                     $("div.defbox").html(retry_defin);
-                } else {
-                    $("div.defbox").html("No definitions available");
                 }
-
             })
         }
 
     });
+
+    /* $( "div.defbox" ).replaceWith( self.text() ); */
   }
 )
 
