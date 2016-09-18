@@ -55,11 +55,45 @@
   </nav>
 
   <div class="container">
+
+
+
+
     <div class="row">
       <div class="col-sm-8 l-pane">
         <p class="paragraph">
+
+
+
+
+
           {% for word in words %}<span class="{{ word.pos_ }} pword word" name="{{ word.lemma_ }}" pos="{{ word.pos_ }}">{{ word.orth_ }}</span>{{ word.whitespace_ }}{% endfor %}
         </p>
+
+
+<div class="row" style="display: flex; padding: 1rem;">
+  <div clas="col-sm-3">
+    <div class="circle" style="background-color: #dc322f">Noun</div>
+  </div>
+  <div clas="col-sm-3">
+    <div class="circle" style="background-color: #268bd2">Verb</div>
+  </div>
+  <div clas="col-sm-3">
+    <div class="circle" style="background-color: #b58900">Adjective</div>
+  </div>
+  <div clas="col-sm-3">
+    <div class="circle" style="background-color: #6c71c4">Adverb</div>
+  </div>
+  <div clas="col-sm-3">
+    <div class="circle" style="background-color: #cb4b16">Pronoun</div>
+  </div>
+  <div clas="col-sm-3">
+    <div class="circle" style="background-color: #d33682">Prop Noun</div>
+  </div>
+  </div>
+
+
+
 
         <form action="." method="POST" >
           <textarea class="user-input" name="text">paste text here</textarea><br>

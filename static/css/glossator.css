@@ -85,6 +85,15 @@ body {
 }
 
 
-
-ADJ, ADP, ADV, AUX, CONJ, DET, INTJ, NOUN, NUM, PART, PRON, PROPN, PUNCT, SCONJ, SYM, VERB, X, EOL, SPACE
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    font-size: 15px;
+    color: #fff;
+    line-height: 100px;
+    text-align: center;
+    background: #000;
+    margin: 8px;
+}
 
