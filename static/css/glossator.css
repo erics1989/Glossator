@@ -1,5 +1,5 @@
 body {
-  font-family: 'Eczar', serif;
+  font-family: 'Rubik', sans-serif;
   padding-top: 50px;
   background-color: #fdf6e3;
   color: #657b83;
@@ -10,8 +10,19 @@ body {
   height: 20em;  
 }
 
+.parsed_text {
+  font-family: 'Eczar', serif;
+  font-size: 40px;
+}
+
+.l-pane {
+  height: 100%;
+  padding-top: 1rem;
+}
+
 .r-pane {
   background-color: #eee8d5;
+  padding-top: 1rem;
 }
 
 .NOUN {

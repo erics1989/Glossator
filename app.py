@@ -14,14 +14,7 @@ def glossator():
 def glossator_parse():
     text = request.form['text']
     data = parser2.parse(text)
-
-    def_json_str = requests.get('http://api.pearson.com/v2/dictionaries/lasde/entries?headword=fence').json()
-    define = def_json_str["results"][0]["senses"][0]["definition"][0]
-
-
-    return render_template('parsed.html', words=data["words"], definition=define)
+    return render_template('parsed.html', words=data["words"])
  
-
-
 if __name__ == 'main':
     app.run(debug=True)

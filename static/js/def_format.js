@@ -20,9 +20,11 @@ $( "span.pword" )
   .click(function() {
     console.log($(this).attr('name'))
     var pathstring = "http://api.pearson.com/v2/dictionaries/lasde/entries?headword="
-    var lemma = $(this).attr('name')
+    pathstring = pathstring.concat($(this).attr('name'))
+    
 
-    $.get(pathstring.concat(lemma),
+    $.get(
+      pathstring,
       function( data ) {
         var defin = convert(data);
         /*$( "div.defbox" ).replaceWith( defin );*/
